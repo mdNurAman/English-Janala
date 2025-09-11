@@ -26,48 +26,47 @@
     <body>
         <!-- Navbar -->
         <header>
-            
             <div class="parent border-b-1 border-gray-500 flex justify-between items-center bg-[#edf7ff]">
                 <div class="left-container flex items-center">
                     <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            class="h-5 w-5"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                        >
-                            <path
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="M4 6h16M4 12h8m-8 6h16"
-                            />
-                        </svg>
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16"
+                                />
+                            </svg>
+                        </div>
+                        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            <li class="border-1 border-blue-300 btn btn-soft btn-primary">
+                                <i class="fa-solid fa-circle-question"></i>
+                                FAQ
+                            </li>
+                            <li class="border-1 border-blue-300 btn btn-soft btn-primary">
+                                <i class="fa-solid fa-book-open"></i>
+                                Learn
+                            </li>
+                            <li class="border-1 border-blue-300 btn btn-soft btn-primary">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                LogOut
+                            </li>
+                        </ul>
                     </div>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li class="border-1 border-blue-300 btn btn-soft btn-primary">
-                            <i class="fa-solid fa-circle-question"></i>
-                            FAQ
-                        </li>
-                        <li class="border-1 border-blue-300 btn btn-soft btn-primary">
-                            <i class="fa-solid fa-book-open"></i>
-                            Learn
-                        </li>
-                        <li class="border-1 border-blue-300 btn btn-soft btn-primary">
-                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                            LogOut
-                        </li>
-                    </ul>
-                </div>
-                <div class="left p-5 pl-8 pr-8">
-                    <a href="" class="flex items-center font-bold gap-2">
-                        <span>English</span>
-                        <img src="./assets/logo.png" alt="" class="w-8 h-8">
-                        <span class="bangla">জানালা</span>
-                    </a>
-                </div>
+                    <div class="left p-5 pl-8 pr-8">
+                        <a href="" class="flex items-center font-bold gap-2">
+                            <span>English</span>
+                            <img src="./assets/logo.png" alt="" class="w-8 h-8">
+                            <span class="bangla">জানালা</span>
+                        </a>
+                    </div>
                 </div>
                 <div class="hidden md:block right p-5 pl-8 pr-8">
                     <ul class="space-x-4">
@@ -87,25 +86,48 @@
                 </div>
             </div>
         </header>
-
         <!-- hero section  -->
-         <main>
+        <main>
             <section class="w-11/12 mx-auto  hero-container  flex flex-col-reverse md:flex-row gap-x-[100px] justify-between items-center">
                 <div class="left flex-1">
-                    <h1 class="text-4xl font-bold text-center md:text-left"><span class="text-[#00bcff]">English </span>is Easy!!</h1>
+                    <h1 class="text-4xl font-bold text-center md:text-left">
+                        <span class="text-[#00bcff]">English</span>is Easy!!
+                    </h1>
                     <p class="bangla pt-5 text-lg md:text-xl text-center md:text-justify">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
-
-                   <div class="flex flex-col gap-6 w-[340px] mt-6">
-                    <input type="email" name="" id="" placeholder="Enter Your Email" class="p-2 rounded-md border-1 border-gray-400">
-                    <input type="password" name="" id="" placeholder="password" class="p-2 rounded-md border-1 border-gray-400">
-                    <button type="submit" class="btn rounded-md text-white w-[160px] bg-[#422ad5]">Get Started</button>
-                   </div>
+                    <div class="flex flex-col gap-6 w-[340px] mt-6">
+                        <input
+                            type="email"
+                            name=""
+                            
+                            placeholder="Enter Your Email"
+                            class="p-2 rounded-md border-1 border-gray-400"
+                        >
+                        <input
+                            type="password"
+                            name=""
+                            
+                            placeholder="password"
+                            class="p-2 rounded-md border-1 border-gray-400"
+                        >
+                        <button type="submit" class="btn rounded-md text-white w-[160px] bg-[#422ad5]">Get Started</button>
+                    </div>
                 </div>
                 <div class="right flex-1">
                     <img src="./assets/hero-student.png" alt="">
                 </div>
             </section>
-         </main>
+            <section class="vocabularies mb-[100px]">
+                <h1 class="text-4xl font-bold text-center mb-5">
+                    <span class="text-[#00bcff]">Let's</span>Learn Vocabularies
+                </h1>
+                <div id="level-container" class=" flex gap-5 flex-wrap justify-center">
+                    <!-- <button class="border-1 border-blue-300 btn btn-soft btn-primary">
+                        <i class="fa-solid fa-book-open"></i>
+                        Lesson
+                    </button> -->
+                </div>
+            </section>
+        </main>
         <script src="./script.js"></script>
     </body>
 </html>

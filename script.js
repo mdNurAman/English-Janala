@@ -6,7 +6,7 @@ const loadLevel = async () => {
   displayLevel(data.data);
 };
 const spinner = (state) => {
-  if (state ===true) {
+  if (state === true) {
     document.getElementById("spinner").classList.remove("hidden");
     document.getElementById("word-container").classList.add("hidden");
   } else {
@@ -73,7 +73,11 @@ const showDetails = (word) => {
                             </div>`;
   document.getElementById("modal").showModal();
 };
-
+function pronounceWord(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = "en-EN"; // English
+  window.speechSynthesis.speak(utterance);
+}
 const displayWord = (words) => {
   const wordContainer = document.getElementById("word-container");
   wordContainer.classList.remove("middle");
@@ -109,7 +113,11 @@ const displayWord = (words) => {
                         <button onclick="loadDetails(${
                           word.id
                         })" class="btn bg-[#e8f4ff] hover:bg-blue-600 hover:text-white"><i class="fa-solid fa-circle-info "></i></button>
-                        <button class="btn bg-[#e8f4ff] hover:bg-blue-600 hover:text-white"><i class="fa-solid fa-volume-high "></i></button>
+                        <button onclick="pronounceWord('${word.word}')"
+                        class="btn bg-[#e8f4ff] hover:bg-blue-600 hover:text-white">
+                        <i class="fa-solid fa-volume-high"></i>
+                        </button>
+
                     </div>
                 </div>
     `;
@@ -133,4 +141,20 @@ const displayLevel = (lessons) => {
     levelContainer.appendChild(btnDiv);
   }
 };
+const loadSearchData = async (input) => {
+  const url = `https://openapi.programming-hero.com/api/words/all`;
+  const res = await fetch(url);
+  let values = await res.json();
+  const allWords = values.data;
+
+  let filterData = allWords.filter((w) => w.word.toLowerCase().includes(input));
+
+  displayWord(filterData);
+};
+document.getElementById("search-btn").addEventListener("click", function (e) {
+  let input = document.getElementById("input");
+  input = input.value;
+  input = input.trim().toLowerCase();
+  loadSearchData(input);
+});
 loadLevel();

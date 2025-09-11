@@ -4,3 +4,12 @@
 .bangla{
     font-family: "Hind Siliguri", sans-serif;
 }
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.active{
+    background-color: #422ad5;
+    color:white;
+}

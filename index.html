@@ -88,45 +88,76 @@
         </header>
         <!-- hero section  -->
         <main>
-            <section class="w-11/12 mx-auto  hero-container  flex flex-col-reverse md:flex-row gap-x-[100px] justify-between items-center">
+            <section class="w-11/12 mx-auto hero-container flex flex-col-reverse md:flex-row gap-x-[100px] justify-between items-center">
                 <div class="left flex-1">
                     <h1 class="text-4xl font-bold text-center md:text-left">
-                        <span class="text-[#00bcff]">English</span>is Easy!!
+                        <span class="text-[#00bcff]">English</span>
+                        is Easy!!
                     </h1>
-                    <p class="bangla pt-5 text-lg md:text-xl text-center md:text-justify">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+                    <p class="bangla pt-5 text-lg md:text-xl text-center md:text-justify">
+                        আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+            আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
+            অন্য একটি Level এ
+                    </p>
                     <div class="flex flex-col gap-6 w-[340px] mt-6">
                         <input
                             type="email"
                             name=""
-                            
                             placeholder="Enter Your Email"
                             class="p-2 rounded-md border-1 border-gray-400"
                         >
                         <input
                             type="password"
                             name=""
-                            
                             placeholder="password"
                             class="p-2 rounded-md border-1 border-gray-400"
                         >
-                        <button type="submit" class="btn rounded-md text-white w-[160px] bg-[#422ad5]">Get Started</button>
+                        <button type="submit" class="btn rounded-md text-white w-[160px] bg-[#422ad5]">
+                            Get Started
+                        </button>
                     </div>
                 </div>
                 <div class="right flex-1">
                     <img src="./assets/hero-student.png" alt="">
                 </div>
             </section>
-            <section class="vocabularies mb-[100px]">
+            <section class="vocabularies mb-[30px] mt-[50px]">
                 <h1 class="text-4xl font-bold text-center mb-5">
-                    <span class="text-[#00bcff]">Let's</span>Learn Vocabularies
+                    <span class="text-[#00bcff]">Let's</span>
+                    Learn Vocabularies
                 </h1>
-                <div id="level-container" class=" flex gap-5 flex-wrap justify-center">
-                    <!-- <button class="border-1 border-blue-300 btn btn-soft btn-primary">
-                        <i class="fa-solid fa-book-open"></i>
-                        Lesson
-                    </button> -->
+                <div id="level-container" class="flex gap-5 flex-wrap justify-center"></div>
+            </section>
+            <div id="spinner" class="flex justify-center items-center mb-[20px] hidden">
+                <span class="loading loading-spinner text-info loading-xl"></span>
+            </div>
+            <section id="word-container" class="bg-gray-100 w-10/12 h-full p-2 md:p-7 mx-auto rounded-xl grid md:grid-cols-3 gap-5 middle">
+                <div class="flex gap-y-4 flex-col justify-center items-center shadow-lg">
+                    <p class="bangla">আপনি এখনো কোন Lesson Select করেন নি</p>
+                    <h1 class="bangla text-4xl">একটি Lesson Select করুন।</h1>
                 </div>
             </section>
+            <!-- Open the modal using ID.showModal() method -->
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box border-1 border-blue-400">
+                    <!-- Open the modal using ID.showModal() method -->
+                    <button class="btn" onclick="my_modal_5.showModal()">
+                        open modal
+                    </button>
+                    <dialog id="modal" class="modal modal-bottom sm:modal-middle">
+                        <div id="modalContainer" class="modal-box">
+                            
+                            
+                        </div>
+                    </dialog>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
         </main>
         <script src="./script.js"></script>
     </body>
